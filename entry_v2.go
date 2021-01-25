@@ -63,6 +63,10 @@ func V2Entry() {
 		g.AddOutputType("cs", *paramCSharpOut)
 	}
 
+	if *paramJavaOut != "" {
+		g.AddOutputType("java", *paramJavaOut)
+	}
+
 	if *paramGoOut != "" {
 		g.AddOutputType("go", *paramGoOut)
 	}
