@@ -74,7 +74,7 @@ public class {{.CombineStructName}} { {{$globalIndex:=.Indexes}}{{$verticalField
 		return "{{$.BuildID}}";
 	}
 {{range $verticalFields}}
-	public {{.StructName}} getKV{{.Name}}() {
+	public {{.StructName}} getKV_{{.Name}}() {
 		return {{.Name}}.get(0);
 	}	
 {{end}}
