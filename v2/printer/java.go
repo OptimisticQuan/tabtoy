@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 public class {{.CombineStructName}} { {{$globalIndex:=.Indexes}}{{$verticalFields:=.VerticalFields}}
 	{{range .Enums}}
@@ -37,6 +38,7 @@ public class {{.CombineStructName}} { {{$globalIndex:=.Indexes}}{{$verticalField
 		
 		private final int value;
 
+		@JsonCreator
 		public static {{.Name}} fromInt( int v ){
 			switch (v) { {{range .Fields}}
 				case {{.FieldDescriptor.EnumValue}}:
